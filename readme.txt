@@ -41,3 +41,9 @@ summarizing a few bits of terminology:
  leaked) and you need a quick, safeish hack to get things unwedged across a
  bunch of machines. The "automate everything" principle means you should use
  playbooks for everything that's not a panic situation.
+
+*Modules* implement a related set of idempotent actions for a specific purpose,
+ often for managing a particular software package (but in principle it could be
+ anything - ships with modules for managing things like users/groups).
+
+*Playbooks* use modules to define a list of actions that should happen.
