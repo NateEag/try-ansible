@@ -14,6 +14,11 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "hashicorp/precise64"
 
+  config.vm.network "public_network"
+
+  # Set the hostname so we can reach the machine via Avahi.
+  config.vm.hostname = "dev"
+
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "main.yml"
   end
