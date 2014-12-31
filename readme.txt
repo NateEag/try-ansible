@@ -47,3 +47,10 @@ summarizing a few bits of terminology:
  anything - ships with modules for managing things like users/groups).
 
 *Playbooks* use modules to define a list of actions that should happen.
+
+
+...so far I have not found a standard way to manage third-party
+modules/playbooks. I'm just going to drop them lock, stock, and barrel into
+roles/ and library/, so I won't break my setup if a dependency goes offline.
+TODO: figure out how people usually manage this. Looks like ansible-galaxy
+could be at least a partial solution?
